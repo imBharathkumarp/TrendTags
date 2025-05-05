@@ -1,25 +1,90 @@
-# TrendTags - Hashtag Generator Tool
+# TrendTags - Tag Generator 
 
-## Description
-TrendTags is a simple tool that allows users to generate hashtags for Instagram, Facebook, and YouTube based on topics or captions. It's designed to help content creators find relevant hashtags quickly.
+[![CI Status](https://github.com/imDarshanGK/TrendTags/actions/workflows/main.yml/badge.svg)](https://github.com/imDarshanGK/TrendTags/actions)
+[![CodeQL](https://github.com/imDarshanGK/TrendTags/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/imDarshanGK/TrendTags/actions)
 
-## Features
-- Generates hashtags for Instagram, Facebook, and YouTube.
-- Allows users to input any topic and get related hashtags.
-- Provides a list of popular categories like fitness, tech, fashion, and more.
+## Features 
 
-## How to Use
-1. Go to [TrendTags Website](https://trendtags.netlify.app/).
-2. Enter a topic or caption (e.g., fitness, motivation).
-3. Select a platform (Instagram, Facebook, YouTube).
-4. Click "Generate Hashtags" to get a list of related hashtags.
+- Real-time tag generation from YouTube trends
+- One-click copy all tags
+- Clean responsive interface
+- Fast Flask-powered backend
+- Auto-updating tag database
 
-## How to Contribute
-We welcome contributions! Here's how you can help:
-1. Fork the repository.
-2. Clone your forked repository to your local machine.
-3. Make changes or add features.
-4. Create a pull request with a description of your changes.
+## Installation 🛠️
+
+### Prerequisites
+- Python 3.8+
+- YouTube API key
+
+### Quick Start
+
+1. Clone the repository and navigate to it in the command line:
+```bash
+git clone https://github.com/your-username/TrendTags.git
+cd TrendTags
+```
+
+2. Create `.env` file:
+```bash
+cp .env.example .env
+nano .env  # Add your actual API keys
+```
+
+Then edit `.env` and replace placeholder values:
+
+```env
+# SECURITY WARNING!
+# 1. Rename this to .env
+# 2. Never commit real keys
+# 3. Get keys from Google Cloud Console
+
+YOUTUBE_API_KEY=your_key_here
+RAPIDAPI_KEY=your_key_here
+```
+
+3. Set up environment:
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the application:
+```bash
+python app.py
+```
+
+## Usage
+1. Enter your video topic (e.g., "cooking", "tech reviews")
+2. Select number of tags (10-30)
+3. Click "Generate Tags"
+4. Copy tags with one click
+
+## Project Structure 
+```bash
+
+TrendTags/
+├── .github/           # CI/CD workflows
+│   ├── workflows/     # GitHub Actions
+│   └── codeql/        # Security config
+├── static/            # Frontend assets
+│   ├── css/           # Stylesheets
+│   └── js/            # JavaScript
+├── templates/         # HTML templates
+├── app.py             # Main application
+├── config.py          # Configuration
+├── requirements.txt   # Dependencies
+├── LICENSE            # MIT License
+└── README.md          # This file
+```
+
+## Contributing
+We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for:
+
+* How to report issues
+* Code style guidelines
+* Pull request process
+* Commit message standards
+
 
 ## License
-This project is open-source and available under the MIT License. See the LICENSE file for more details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
